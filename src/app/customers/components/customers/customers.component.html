@@ -1,0 +1,15 @@
+<p>customers works!</p>
+<app-customers-list [customers]="people"></app-customers-list>
+<div>
+  <ul>
+    <li
+      *ngFor="let errand of fewErrands"
+      id="{{errand.id}}"
+
+    >
+      <h3 [className]="errand.completed ? 'blue': 'yellow'">{{errand.title}}</h3>
+      <button (click)="changeComplete(errand.id)">On</button>
+      <button>Off</button>
+    </li>
+  </ul>
+</div>
